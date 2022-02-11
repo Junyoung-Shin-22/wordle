@@ -65,7 +65,7 @@ def get_optimal_guess(words):
     #min_max_group_size = len(words)
     min_avg_group_size = len(words)
     
-    for guess in words:
+    for guess in all_words:
         #max_group_size = 0
         avg_group_size = 0
         
@@ -110,7 +110,7 @@ def play():
         
         print('there are %d possible answers.' % len(pw))
         
-        if len(pw) < 300:
+        if len(pw) < 100:
             optimal_guess = get_optimal_guess(pw)
             print('try:', optimal_guess)
         
