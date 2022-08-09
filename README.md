@@ -1,12 +1,12 @@
 # wordle
 
-wordle.py가 있는 경로로 가서 다음을 실행
-> python wordle.py
+`python wordle_play.py`
 
-추천 단어를 입력하고, wordle에 출력된 결과를 입력
+Or, to play in the hard mode:
+`python wordle_play.py --hard`
 
-회색 -> 0
-초록색 -> 1
-노란색 -> 2
+Solving Wordle in hard mode is usually faster, but less optimal.
 
-추천 단어가 나오면 그걸 wordle에 집어넣고 반복.
+
+1. For the first round, enter 'lares' into Wordle.
+1. Enter the suggested word into Wordle ()
