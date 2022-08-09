@@ -40,7 +40,7 @@ _METRICS =\
     {
         'max':
             lambda freq, _: max(freq),
-        'min':
+        'mean':
             lambda freq, words: sum(i**2 for i in freq)/len(words),
     }
 
