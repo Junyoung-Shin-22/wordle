@@ -10,8 +10,10 @@ Or, to play in the hard mode:
 
 ## 1. How To Use
 1. For the first round, enter 'serai' or 'lares' into Wordle.
-1. Enter the suggested word into Wordle
 1. Enter the result from Wordle into the script as a five-digit number (Grey: 0, Green: 1, Yellow: 2)
+1. Enter the suggested word into Wordle
+1. Repeat 2 and 3 until you get the final answer.
+
 
 ## 2. Example
 Includes spoiler for Wordle from Aug. 8, 2022. !!!
