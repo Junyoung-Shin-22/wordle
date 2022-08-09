@@ -24,12 +24,15 @@ def get_result(answer, guess):
     result = ''
 
     for i in range(len(answer)):
-        if guess[i] == answer[i]:
-            result += '1'
-        elif guess[i] in answer:
-            result += '2'
-        else:
+        if guess[i] not in answer:
             result += '0'
+        elif guess[i] == answer[i]:
+            result += '1'
+        else:
+            if guess.count(guess[i]) > 1:
+                result += '0'
+            else:
+                result += '2'
     
     return result
 
