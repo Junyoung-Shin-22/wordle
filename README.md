@@ -16,7 +16,7 @@ Or, to play in the hard mode:
 
 
 ## 2. Example
-Includes spoiler for Wordle from Aug. 8, 2022. !!!
+Wordle from Aug. 8, 2022.
 
 ![image](https://user-images.githubusercontent.com/35788350/183581651-87b4b01c-3732-4bab-9a7d-32d4bbc1fa4b.png)
 
