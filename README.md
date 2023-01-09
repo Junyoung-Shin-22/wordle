@@ -1,10 +1,10 @@
 # wordle 1.0.2
 
-`python wordle_play.py`
+`python main.py`
 
 Or, to play in the hard mode:
 
-`python wordle_play.py --hard`
+`python main.py --hard`
 
 (Solving Wordle in hard mode is usually faster, but less optimal.)
 
