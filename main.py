@@ -43,6 +43,7 @@ def main():
         
         if len(words) == 1:
             print('answer:', words[0])
+            input()
             return
         
         if round == 1: 
@@ -50,6 +51,8 @@ def main():
             
         else:
             print(f'there are {len(words)} possible answers.')
+            if len(words) <= 10: 
+                print('candidates are:', ', '.join(words))
         
             optimal_guess = get_optimal_guess(words, 'max', hard=hard, pbar=True)
             print(f"(suggestion: '{optimal_guess}')\n")
@@ -58,7 +61,7 @@ def main():
         result = _get_user_result()
         print()
 
-        words = get_possible_words(words, guess, result)
+        words = get_possible_answers(words, guess, result)
 
 if __name__ == '__main__':
     main()

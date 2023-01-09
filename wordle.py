@@ -36,7 +36,7 @@ def get_result(answer, guess):
     
     return result
 
-def get_possible_words(words, guess, result):
+def get_possible_answers(words, guess, result):
     return [word for word in words if get_result(word, guess) == result]
 
 _METRICS =\
@@ -47,7 +47,7 @@ _METRICS =\
             lambda freq, words: sum(i**2 for i in freq)/len(words),
     }
 
-def get_optimal_guess(words, metric='max', hard=False ,pbar=False):
+def get_optimal_guess(words, metric='max', hard=False, pbar=False):
     assert metric in _METRICS
     
     if hard:

@@ -1,4 +1,4 @@
-# wordle 1.0.0
+# wordle 1.0.2
 
 `python wordle_play.py`
 
