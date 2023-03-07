@@ -3,27 +3,23 @@ import sys
 
 def _get_user_guess():
     while True:
-        guess = input("your guess (type in 'exit' to exit): ")
+        guess = input("your guess: ")
 
-        if guess == 'exit': 
-            exit()
-
-        elif guess in WORDS:
+        if guess in WORDS:
             return guess
         
         print('invalid guess.')
+        return None
 
 def _get_user_result():
     while True:
-        result = input("result (type in 'exit' to exit): ")
+        result = input("result: ")
         
-        if result == 'exit':
-            exit()
-        
-        elif result in RESULTS:
+        if result in RESULTS:
             return result
         
         print('invalid result.')
+        return None
 
 def main():
     if len(sys.argv) > 1 and sys.argv[1] == '--hard':
@@ -33,6 +29,7 @@ def main():
 
     words = WORDS[:]
     round = 0
+    history = []
     
     while True:
         round += 1
@@ -40,10 +37,13 @@ def main():
             print(f'[round {round} (hard)]')
         else:
             print(f'[round {round}]')
+
+        history.append(len(words))
         
         if len(words) == 1:
             print('answer:', words[0])
-            input()
+            print('-'.join(map(str, history)))
+            input('press enter to exit')
             return
         
         if round == 1: 

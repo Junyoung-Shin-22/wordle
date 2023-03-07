@@ -23,17 +23,29 @@ RESULTS = [''.join(r) for r in product('012', repeat=5)]
 def get_result(answer, guess):
     result = ''
 
-    for i in range(len(answer)):
+    # for i in range(len(answer)):
+    #     if guess[i] not in answer:
+    #         result += '0'
+    #     elif guess[i] == answer[i]:
+    #         result += '1'
+    #     else:
+    #         if guess.count(guess[i]) > 1:
+    #             result += '0'
+    #         else:
+    #             result += '2'
+    for i in range(5):
         if guess[i] not in answer:
             result += '0'
+
         elif guess[i] == answer[i]:
             result += '1'
+        
+        elif guess.index(guess[i]) < i:
+            result += '0'
+        
         else:
-            if guess.count(guess[i]) > 1:
-                result += '0'
-            else:
-                result += '2'
-    
+            result += '2'
+
     return result
 
 def get_possible_answers(words, guess, result):
